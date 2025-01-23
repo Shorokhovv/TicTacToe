@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Вход в игру</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgba(44, 57, 121, 0.09);
+        }
+        .registration-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .registration-container h2 {
+            margin-bottom: 20px;
+        }
+        .registration-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .registration-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(96, 194, 170, 1);
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .registration-container button:disabled {
+            background-color: rgba(96, 194, 170, 0.3);
+        }
+        .icon 
+        {
+            width: 40%;
+        }
+    </style>
+</head>
+<body>  
+    <div class="registration-container">
+        <img class="icon" src = "Image\doggy.png"></img>
+        <h2>Войдите в игру</h2>
+        <input type="text" id="name" placeholder="Логин">
+        <input type="password" id="password" placeholder="Пароль">
+        <button id="registerBtn" disabled>Войти</button>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>
