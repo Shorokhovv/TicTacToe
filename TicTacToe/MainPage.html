@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <meta name="op" content="https://github.com/Сipher/Caesar/shift=15&text=Hwdgdzwdkk">
+    <link rel="stylesheet" href="/TicTacToe/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="/TicTacToe/Image/logo.png" alt="Logo">
+        <ul class="tabs">
+            <li><a href="#" class="active" data-tab="gameField">Игровое поле</a></li>
+            <li><a href="#" data-tab="rating">Рейтинг</a></li>
+            <li><a href="#" data-tab="activePlayers">Активные игроки</a></li>
+            <li><a href="#" data-tab="gameHistory">История игр</a></li>
+            <li><a href="#" data-tab="playerList">Список игроков</a></li>
+        </ul>
+        <button class="logout-button"  onclick= "switchPage('login.html')">
+            <img src="/TicTacToe/Image/logout.png" alt="Logout">
+        </button>
+    </div>  
+
+    <div id="RestartWindow" class="modal">
+        <div class="modal-content">
+            <img class="icon" src="/TicTacToe/Image/win.png" alt="Win Icon">
+            <p id="modalMessage"></p>
+            <button onclick="resetGame()" class="btnNG">Новая игра</button>
+            <button onclick="exitToMenu()" class="btnEx">Выйти в меню</button>
+        </div>
+    </div>
+
+    <div class="container"> 
+        <div class="tab-content active" id="gameField">
+            <h1 class="timer">00:00</h1>
+            <div class="grid" id="grid">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="chat-box">
+                <div class="chat-messages" id="chat-messages"></div>
+                    <div class="input-container">
+                        <div class="flex items-center">
+                            <input id="message-input" placeholder="Сообщение..." type="text"/>
+                                <button onclick="sendMessage()">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="rating">
+            <h2>Здесь будет информация о рейтинге игроков.</h2>
+        </div>
+        <div class="tab-content" id="activePlayers">
+            <h2>Здесь будет информация об активных игроках.</h2>
+        </div>
+        <div class="tab-content" id="gameHistory">
+            <h2>Здесь будет информация о истории игр.</h2>
+        </div>
+        <div class="tab-content" id="playerList">
+            <h2>Здесь будет информация о списке игроков.</h2>
+        </div>
+    </div>
+    
+    <!-- <div class="gamersPanel"></div> -->
+    
+    <script src="/TicTacToe/scripts/MainPage.js"></script>
+</body>
+</html>
