@@ -1,9 +1,9 @@
-const nameInput = document.getElementById('name');
+const globalUserName = document.getElementById('name');
 const passInput = document.getElementById('password');
 const registerBtn = document.getElementById('registerBtn');
 
-nameInput.addEventListener('input', function() {
-    if (nameInput.value.trim() !== '') {
+globalUserName.addEventListener('input', function() {
+    if (globalUserName.value.trim() !== '') {
         registerBtn.disabled = false;
     } else {
         registerBtn.disabled = true;
@@ -11,7 +11,8 @@ nameInput.addEventListener('input', function() {
 });
 
 registerBtn.addEventListener('click', function() {
-    if (nameInput.value.trim() !== '') {
+    if (globalUserName.value.trim() !== '') {
         window.location.href = 'MainPage.html';
+
     }
 });
